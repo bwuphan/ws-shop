@@ -9,7 +9,7 @@ const Navigation = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <Link to={ROUTES.HOME}>
       <img width="80"
-        src="https://logos-download.com/wp-content/uploads/2016/04/Sacramento_Kings_logo_transparent_bg.png"
+        src="https://images.vexels.com/media/users/3/128426/isolated/preview/4fda912936524335c7ccb850afb9d061-pineapple-sliced-circle-icon-by-vexels.png"
         alt="kings_logo"
         />
     </Link>
