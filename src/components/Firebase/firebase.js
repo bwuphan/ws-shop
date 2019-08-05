@@ -3,13 +3,13 @@ import 'firebase/auth';
 import 'firebase/database';
 
 const config = {
-  apiKey: "AIzaSyBJFsr_g7sxkWkWsIjcpXsKp9zkiLMiaks",
-  authDomain: "message-board-5271a.firebaseapp.com",
-  databaseURL: "https://message-board-5271a.firebaseio.com",
-  projectId: "message-board-5271a",
-  storageBucket: "message-board-5271a.appspot.com",
-  messagingSenderId: "115494551486",
-  appId: "1:115494551486:web:a074ec1090c179ec"
+  apiKey: "AIzaSyCq78J6V2e5F11u4rzc1wbHCxBiKDVVCnY",
+  authDomain: "ws-shop.firebaseapp.com",
+  databaseURL: "https://ws-shop.firebaseio.com",
+  projectId: "ws-shop",
+  storageBucket: "",
+  messagingSenderId: "528331806625",
+  appId: "1:528331806625:web:23e9403a17cea18b"
 };
 
 class Firebase {
