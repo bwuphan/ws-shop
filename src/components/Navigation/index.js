@@ -34,7 +34,7 @@ const NavigationAuth = () => (
       </li>
       <li className="nav-item">
         <span className="nav-link" href="#">
-          <Link className="text-decoration-none" to={ROUTES.ADMIN}>Admin</Link>
+          <Link className="text-decoration-none" to={ROUTES.CHECKOUT}>Checkout</Link>
         </span>
       </li>
     </ul>
