@@ -74,7 +74,7 @@ class SignUpFormBase extends Component {
 
     return (
       <div className="container">
-        <div class="card bg-light mb-3 mx-auto" style={{'max-width': '30rem'}}>
+        <div class="card bg-light mb-3 mx-auto max-width-30">
           <div class="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
