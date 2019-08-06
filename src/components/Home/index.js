@@ -3,11 +3,10 @@ import { AuthUserContext } from '../Session';
 import Products from '../Products';
 const HomePage = () => (
   <div>
-    <h1>Home Page</h1>
-    <p>The Home Page is accessible by every signed in user.</p>
     <AuthUserContext.Consumer>
-      {authUser => (authUser &&
+      {authUser => (authUser ?
         <Products authUser={authUser} />
+        : <Products />
       )}
     </AuthUserContext.Consumer>
   </div>
