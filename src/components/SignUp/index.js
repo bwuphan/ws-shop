@@ -39,6 +39,7 @@ class SignUpFormBase extends Component {
           .set({
             username,
             email,
+            cart: false
           });
       })
       .then(authUser => {
