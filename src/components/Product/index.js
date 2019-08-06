@@ -4,7 +4,7 @@ import ProductModal from '../ProductModal';
 
 const product = ({ product, idx, addToCart, isSignedIn }) => (
   <div className="p-3 d-flex justify-content-center" key={idx}>
-    <div className="card height-31 width-20 d-flex align-content-between shadow-sm">
+    <div className="card min-height-28 width-16 d-flex align-content-between shadow-sm">
       <img className="card-img-top" src={product.hero.href} alt={`${product.name}`}></img>
       <div className="card-body">
         <h6 className="card-title text-center">{product.name}</h6>
