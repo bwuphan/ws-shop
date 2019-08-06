@@ -63,16 +63,16 @@ const UserList = ({ users }) => (
             <th scope="col">Email</th>
             <th scope="col">Username</th>
           </tr>
-          </thead>
-          <tbody>
-            {users.map(user => (
-              <tr key={user.uid}>
-                <td>{user.uid}</td>
-                <td>{user.email}</td>
-                <td>{user.username}</td>
-              </tr>
-            ))}
-          </tbody>
+        </thead>
+        <tbody>
+          {users.map(user => (
+            <tr key={user.uid}>
+              <td>{user.uid}</td>
+              <td>{user.email}</td>
+              <td>{user.username}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   </div>
