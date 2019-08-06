@@ -69,7 +69,7 @@ class Cart extends Component {
         </div>
       );
     } else {
-      return <Loader />
+      return <div className="text-center pt-5"><Loader /></div>
     };
   };
 };
