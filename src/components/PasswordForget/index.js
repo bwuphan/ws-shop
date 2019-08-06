@@ -77,8 +77,8 @@ class PasswordForgetFormBase extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
 const PasswordForgetLink = () => (
   <p>

@@ -98,8 +98,8 @@ class SignInFormBase extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
 const SignInForm = compose(
   withRouter,

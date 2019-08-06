@@ -33,8 +33,8 @@ class Products extends Component {
         }
         this.setState({ loading: false });
       });
-    }
-  }
+    };
+  };
 
   componentWillUnmount() {
     if (this.props.authUser) {
@@ -84,8 +84,8 @@ class Products extends Component {
       );
     } else {
       return (<Loader />)
-    }
-  }
-}
+    };
+  };
+};
 
 export default withFirebase(Products);

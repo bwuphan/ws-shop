@@ -10,7 +10,7 @@ const Navigation = () => (
     <Link to={ROUTES.HOME}>
       <img width="80"
         src="https://images.vexels.com/media/users/3/128426/isolated/preview/4fda912936524335c7ccb850afb9d061-pineapple-sliced-circle-icon-by-vexels.png"
-        alt="kings_logo"
+        alt="pineapple_logo"
         />
     </Link>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,6 @@ const NavigationAuth = () => (
     </ul>
     <SignOutButton />
   </div>
-
 );
 
 const NavigationNonAuth = () => (

@@ -138,8 +138,8 @@ class SignUpFormBase extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
 const SignUpLink = () => (
   <p>

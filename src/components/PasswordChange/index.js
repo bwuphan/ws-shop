@@ -13,7 +13,7 @@ class PasswordChangeForm extends Component {
     super(props);
 
     this.state = { ...INITIAL_STATE };
-  }
+  };
 
   onSubmit = event => {
     const { passwordOne } = this.state;
@@ -83,7 +83,7 @@ class PasswordChangeForm extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
 export default withFirebase(PasswordChangeForm);
