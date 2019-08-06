@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 
-import { withFirebase } from '../Firebase';
 
+import data from '../../resource/data.js';
+
+import { withFirebase } from '../Firebase';
+import Product from '../Product';
 import ProductModal from '../ProductModal';
 import Loader from '../Loader';
-import data from '../../resource/data.js';
+import { AuthUserContext } from '../Session';
 
 class Products extends Component {
   constructor(props) {
@@ -14,12 +17,23 @@ class Products extends Component {
       loading: false,
       products: null,
       users: {},
-      data: null
+      data: null,
+      cart: {}
     }
   }
 
   componentDidMount() {
-    this.setState({ products: JSON.parse(data).groups });
+    this.setState({ products: JSON.parse(data).groups, loading: true });
+    if (this.props.authUser) {
+      this.props.firebase.user(this.props.authUser.uid).on('value', snapshot => {
+        const userObject = snapshot.val();
+
+        if (userObject.cart) {
+          this.setState({ cart: {} });
+        }
+      });
+    }
+    console.log(this.props.authUser);
   }
 
   componentWillUnmount() {
@@ -38,29 +52,20 @@ class Products extends Component {
     if (products) {
       products = this.groupProducts(products, 3);
       return (
+      <AuthUserContext.Consumer>
+        {authUser => (
         <div className="d-flex flex-column justify-content-center">
+          <pre>{authUser && authUser.uid}</pre>
           {products.map((group, i) =>
             <div className="products__group d-flex" key={i}>
               {group.map((product, j) =>
-                <div className="p-3 d-flex justify-content-center">
-                  <div className="card height-31 width-20 d-flex align-content-between" key={j}>
-                    <img className="card-img-top" src={product.hero.href} alt="Card image cap"></img>
-                    <div className="card-body">
-                      <h6
-                        onClick={this.groupProducts}
-                        className="card-title text-center"
-                      >{product.name}</h6>
-                      <p className="card-text text-success font-weight-bold text-center">
-                        From ${product.priceRange.selling.low} - ${product.priceRange.selling.high}
-                      </p>
-                    </div>
-                    <ProductModal product={product}/>
-                  </div>
-                </div>
+                <Product product={product} idx={j} key={j} />
               )}
             </div>
           )}
         </div>
+        )}
+      </AuthUserContext.Consumer>
       );
     } else {
       return (<Loader />)
