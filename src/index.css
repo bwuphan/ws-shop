@@ -12,11 +12,15 @@ code {
     monospace;
 }
 
-.height-31 {
-  height: 30rem;
+.max-width-30 {
+  max-width: 30rem;
 }
 
-.width-20 {
+.min-height-28 {
+  min-height: 28rem;
+}
+
+.width-16 {
   width: 16rem;
 }
 
