@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 You can find the deployed site <a href=https://ws-shop.firebaseapp.com/.>here</a>
 
+Note: To use the `Cart` features of the app, you must sign up with your email and password (Doesn't have to be a real email address) and be signed in. Once your are signed in you can add items to a cart and check out.
+
 ## Available Scripts
 
 In the project directory, you can run:
