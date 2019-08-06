@@ -41,6 +41,9 @@ class Firebase {
 
   users = () => this.db.ref('users');
 
+  doUpdateCart = (cart, uid) => {
+    return this.user(uid).update({ cart });
+  }
 }
 
 
