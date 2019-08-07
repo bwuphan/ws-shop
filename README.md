@@ -1,4 +1,4 @@
-You can find the deployed site <a href=https://ws-shop.firebaseapp.com/.>here</a>
+You can find the deployed site <a href="ws-shop.web.app">here</a>
 
 Note: To use the `Cart` features of the app, you must sign up with your email and password (doesn't have to be a real email address) and be signed in. Once you are signed in you can add items to a cart and also check out. The cart persists even after you sign out or close the browser but once you check out, your cart gets cleared.
 
